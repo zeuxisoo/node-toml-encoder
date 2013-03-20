@@ -96,9 +96,9 @@ TOMLEncoder.prototype.isObject = function(object) {
 TOMLEncoder.prototype.isAssoc = function(array) {
 	var self = this;
 
-	return (this.objectKeys(array).filter(function(value) {
+	return Object.keys(array).filter(function(value) {
 		return (self.isString(value) === true && isNaN(value) === true);
-	}).length === 0);
+	}).length === 0;
 }
 
 TOMLEncoder.prototype.isString = function(value) {
