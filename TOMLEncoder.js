@@ -113,14 +113,4 @@ TOMLEncoder.prototype.isBoolean = function(value) {
 	return (typeof value == "boolean");
 }
 
-TOMLEncoder.prototype.objectKeys = function(object) {
-	var keys = [];
-	for(var i in object) {
-		if (object.hasOwnProperty(i) === true) {
-			keys.push(i);
-		}
-	}
-	return keys;
-}
-
 module.exports = TOMLEncoder;
